@@ -9,6 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 //@ComponentScan
 @SpringBootApplication
 public class Application {
+    // start db server java -cp h2-1.4.190.jar org.h2.tools.Server
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
