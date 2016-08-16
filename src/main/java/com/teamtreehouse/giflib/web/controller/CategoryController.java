@@ -2,6 +2,7 @@ package com.teamtreehouse.giflib.web.controller;
 
 import com.teamtreehouse.giflib.model.Category;
 import com.teamtreehouse.giflib.sevice.CategoryService;
+import com.teamtreehouse.giflib.web.Color;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +53,8 @@ public class CategoryController {
     @RequestMapping("categories/add")
     public String formNewCategory(Model model) {
         // TODO: Add model attributes needed for new form
-        model.addAttribute("catgory", new Category());
+        model.addAttribute("category", new Category());
+        model.addAttribute("colors", Color.values());
         return "category/form";
     }
 
