@@ -1,12 +1,13 @@
 package com.teamtreehouse.giflib.web.controller;
 
 import com.teamtreehouse.giflib.model.Gif;
-import com.teamtreehouse.giflib.sevice.CategoryService;
+import com.teamtreehouse.giflib.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +63,7 @@ public class GifController {
 
     // Upload a new GIF
     @RequestMapping(value = "/gifs", method = RequestMethod.POST)
-    public String addGif() {
+    public String addGif(@RequestParam MultipartFile file) {
         // TODO: Upload new GIF if data is valid
 
         // TODO: Redirect browser to new GIF's detail view
